@@ -1,3 +1,5 @@
+const tsconfig = require('./tsconfig.json')
+
 module.exports = function (api) {
   api.cache(true);
   return {
@@ -9,19 +11,7 @@ module.exports = function (api) {
         'module-resolver',
         {
           root: ['./'],
-          alias: {
-            '@components': './components',
-            '@screens': './screens',
-            '@assets': './assets',
-            '@locales': './locales',
-            '@config': './config',
-            '@utils': './utils',
-            '@services': './services',
-            '@store': './store',
-            '@slices': './slices',
-            '@hooks': './hooks',
-            '@navigations': './navigations',
-          },
+          alias: tsconfig.compilerOptions.paths,
         },
       ],
       'react-native-reanimated/plugin',
