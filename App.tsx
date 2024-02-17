@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {View, TextField, Text, Button} from 'react-native-ui-lib';
+import { BodyText } from './components';
+import './locales/i18n';
 
 export default class Example extends Component {
 
@@ -7,6 +9,7 @@ export default class Example extends Component {
     return (
       <View flex paddingH-25 paddingT-120>
         <Text blue50 text20>Welcome</Text>
+        <BodyText>lang</BodyText>
         <TextField text50 placeholder="username" grey10/>
         <TextField text50 placeholder="password" secureTextEntry grey10/>
         <View marginT-100 center>

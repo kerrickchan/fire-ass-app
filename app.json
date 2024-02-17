@@ -1,0 +1,7 @@
+{
+  "expo": {
+    "name": "Fire Ass",
+    "slug": "fire-ass",
+    "plugins": ["expo-localization"]
+  }
+}
